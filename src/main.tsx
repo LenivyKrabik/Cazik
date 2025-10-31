@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './homePage/home'
 import Games from './games/games';
 import Profile from './profile/profile';
+import Header from './header';
 
 const router = createBrowserRouter([
   {path:"/" , element: <HomePage/>},
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <Header/>
     <RouterProvider router={router}/>
   </StrictMode>,
 )
