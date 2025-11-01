@@ -1,5 +1,15 @@
 @import url(styles/header.css);
 
+:root{
+    --bright-primary-color: #77E0B1;
+    --soft-primary-color: #76D0A8;
+    --middle-primary-color: #64B38F;
+    --dark-primary-color: #5B9378;
+
+    --bright-secondary-color: #484945;
+    --dark-secondary-color: #363732;
+}
+
 *{
     margin: 0;
     padding: 0;
