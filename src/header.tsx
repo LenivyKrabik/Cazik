@@ -7,18 +7,20 @@ function Header() {
   return (
     <div className="header">
       <div className="logo">
-        <img src="../public/vite.svg"></img>
+        <Link to={"/"}>
+          <img src="../public/vite.svg"></img>
+        </Link>
       </div>
       <div className="navBar">
         <div className="buttonsPanel">
           <Link to={"/"}>
-            <div className="navButton">Home</div>
+            <button className="navButton">Home</button>
           </Link>
           <Link to={"/profile"}>
-            <div className="navButton">Profile</div>
+            <button className="navButton">Profile</button>
           </Link>
           <Link to={"/game"}>
-            <div className="navButton">PLAY</div>
+            <button className="navButton">PLAY</button>
           </Link>
         </div>
       </div>
