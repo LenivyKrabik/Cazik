@@ -1,0 +1,61 @@
+.rulesPanel{
+    height: 100%;
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    right: 0px;
+
+    background-color: rgb(4, 119, 185); /*Dev color*/
+}
+
+.title{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    font-size: clamp(12px, 2vw, 40px);
+    justify-content: center;
+    align-items: center;
+
+    background-color: aqua; /*Dev color*/
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Dev font*/
+
+}
+
+.rules{
+    width: 100%;
+    height: fit-content;
+
+    background-color: gold; /*Dev color*/
+    font-size: min(1.5vw, 2vh);
+}
+
+.rulesPanel button{
+    /*outline: none;
+    border: none;*/
+    cursor: pointer;
+
+    border-radius: 15px;
+    border: 3px solid rgb(168, 29, 196); /*Dev color*/
+    background-color: rgb(217, 37, 253); /*Dev color*/
+
+    /*padding: 10px 70px;*/
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    font-size: 30px;
+}
+
+.rulesPanel button:hover{
+    background-color: color-mix(in hsl, rgb(217, 37, 253) 90%, white 10%);
+}
+
+.rulesPanel button:active{
+    background-color: color-mix(in hsl, rgb(217, 37, 253) 60%, black 40%);
+}
