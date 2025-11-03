@@ -20,6 +20,7 @@
 .gameWrapper .slotsWraper .slotsScreen{
     aspect-ratio: 2/1;
     height: 100%;
+    max-width: 100%;
 
     background-color: greenyellow; /*Dev color*/
 }

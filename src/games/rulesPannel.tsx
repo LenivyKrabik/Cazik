@@ -23,7 +23,9 @@ function RulesPanel({
   return (
     <div className="rulesPanel">
       <div className="title">{title}</div>
-      <div className="rules">{text}</div>
+      <div className="rules">
+        <p>{text}</p>
+      </div>
       <button onClick={click}>{buttonText}</button>
     </div>
   );
