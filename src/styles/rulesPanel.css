@@ -38,6 +38,7 @@
 
 .rules p {
     position: relative;
+    width: calc(100% - 15px);
     left: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Dev font*/
 }
