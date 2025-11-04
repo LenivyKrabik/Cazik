@@ -3,7 +3,7 @@ import "../styles/rulesPanel.css";
 interface Props {
   title: string;
   text: string;
-  click: () => void;
+  click: (() => void) | null;
   buttonText: string;
 }
 
@@ -17,7 +17,7 @@ interface Props {
 function RulesPanel({
   title = "How to paly:",
   text = "Was that the bite of '87?",
-  click = () => {},
+  click = null,
   buttonText = "BingChiling",
 }: Props) {
   return (
@@ -26,7 +26,7 @@ function RulesPanel({
       <div className="rules">
         <p>{text}</p>
       </div>
-      <button onClick={click}>{buttonText}</button>
+      {click ? <button onClick={click}>{buttonText}</button> : null}
     </div>
   );
 }
