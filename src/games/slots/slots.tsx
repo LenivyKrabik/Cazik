@@ -9,8 +9,7 @@ function Slots() {
       <RulesPanel
         title="How to play:"
         text="Just spin the wheel lil bro"
-        click={/* TODO add function for showing menu with all posible combinations*/}
-        buttonText=""
+        buttonText="Patterns"
       />
     </div>
   );

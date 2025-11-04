@@ -1,5 +1,11 @@
+import Slots from "./slots/slots";
+
 function Games() {
-  return <div></div>;
+  return (
+    <div>
+      <Slots />
+    </div>
+  );
 }
 
 export default Games;
