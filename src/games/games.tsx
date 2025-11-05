@@ -1,9 +1,10 @@
 import Slots from "./slots/slots";
+import "../styles/games.css";
 
 function Games() {
   return (
     <div>
-      <Slots />
+      <div className="gameWrapper"></div>
     </div>
   );
 }
