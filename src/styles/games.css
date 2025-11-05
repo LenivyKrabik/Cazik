@@ -7,32 +7,3 @@
     display: flex;
     background-color: brown; /*Dev color*/
 }
-
-.gameWrapper .slotsWraper{
-    height: 100%;
-    width: calc(100% - 250px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: gray; /*Dev color*/
-}
-
-.gameWrapper .slotsWraper .slotsScreen{
-
-    background-color: greenyellow; /*Dev color*/
-}
-
-.gameWrapper .slotsGame{
-    width: 100%;
-    height: 80%;
-
-    background-color: darkblue; /*Dev color*/
-}
-
-.gameWrapper .slotsUI{
-    width: 100%;
-    height: 20%;
-
-    background-color: rgb(240, 127, 255); /*Dev color*/
-}

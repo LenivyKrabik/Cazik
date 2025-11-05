@@ -1,0 +1,63 @@
+.gameWrapper .slotsWraper{
+    height: 100%;
+    width: calc(100% - 250px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: gray; /*Dev color*/
+}
+
+.gameWrapper .slotsWraper .slotsScreen{
+
+    background-color: greenyellow; /*Dev color*/
+}
+
+.gameWrapper .slotsGame{
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+
+    background-color: darkblue; /*Dev color*/
+}
+
+.gameWrapper .slotsUI{
+    width: 100%;
+    height: 20%;
+
+    background-color: rgb(240, 127, 255); /*Dev color*/
+}
+
+.gameWrapper .patternScreen{
+    position: fixed;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 400px);
+
+    height: 500px;
+    width: 800px;
+
+    background-color: black;
+}
+
+
+.slotsGame .slotsColumn{
+    width: 20%;
+    height: 100%;
+
+    overflow:hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    background-color: blanchedalmond; /*Dev color*/
+}
+
+.slotsColumn img{
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    top: -30%; /*-30 to 100%*/
+    
+
+    position: absolute;
+}
