@@ -1,0 +1,38 @@
+
+.game_page{
+    height: 100vh;
+    background-color: var(--middle-primary-color);
+}
+
+.box{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    
+    
+    justify-content: center;
+    height: 60%;
+    aspect-ratio: 1/1;
+    background-color: rgb(29, 39, 29);
+    
+}
+
+.game-2_button{
+    position: a;
+    height: 20%;
+    aspect-ratio: 1/1;
+    margin: 10px;
+    font-size: 18px;
+   
+    color: rgb(241, 241, 241);
+    background-color: rgb(45, 91, 47);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
