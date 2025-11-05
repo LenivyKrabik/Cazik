@@ -1,9 +1,10 @@
+import { useState } from "react";
 import "../styles/rulesPanel.css";
 
 interface Props {
   title: string;
   text: string;
-  click: (() => void) | null;
+  click: React.ReactNode | null;
   buttonText: string;
 }
 
@@ -11,7 +12,7 @@ interface Props {
  *Side rules pannel. Need to be in flexbox
  * @param title {string} - Big title ontop
  * @param text {text} - Main small text
- * @param click {text} - function called when button clicked. Leave empty for no button
+ * @param click {text} - div that appears when button is holded. Leave empty for no button
  * @param buttonText {text} - text on button
  */
 function RulesPanel({
@@ -20,13 +21,22 @@ function RulesPanel({
   click = null,
   buttonText = "BingChiling",
 }: Props) {
+  const [showDiv, setShowDiv] = useState(false);
   return (
     <div className="rulesPanel">
       <div className="title">{title}</div>
       <div className="rules">
         <p>{text}</p>
       </div>
-      {click ? <button onClick={click}>{buttonText}</button> : null}
+      {click ? (
+        <button
+          onMouseDown={() => setShowDiv(true)}
+          onMouseUp={() => setShowDiv(false)}
+        >
+          {buttonText}
+        </button>
+      ) : null}
+      {showDiv && click ? click : null}
     </div>
   );
 }
