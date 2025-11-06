@@ -1,11 +1,12 @@
 
-
+.nested-layout{
+    height: 100%;
+}
 
 .gameNavPanel{
     height: 200px;
-    width: 200px;
 }
 .gameButtonsPanel{
-    h
+    
 }
 .gameNavButton

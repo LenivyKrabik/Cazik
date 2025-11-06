@@ -1,7 +1,8 @@
 
-.game_page{
+.Minespage{
+    position: absolute;
     height: 100vh;
-    background-color: var(--middle-primary-color);
+    background-color: black;
 }
 
 .box{
