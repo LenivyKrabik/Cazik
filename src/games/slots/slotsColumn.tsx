@@ -7,11 +7,7 @@ interface Props {
 
 //States - 1 - spinning
 function SlotsColumn({ id, state }: Props) {
-  const icons = [
-    "/public/Lemon.png",
-    "/public/Cherry.png",
-    "/public/Six-Seven.png",
-  ];
+  const icons = ["/Lemon.png", "/Cherry.png", "/Six-Seven.png"];
 
   const pictures = [
     useRef<HTMLImageElement>(null),
