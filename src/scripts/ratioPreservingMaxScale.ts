@@ -18,10 +18,8 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
             const height = Number(parentStyle.height.match(/\d+/)?.[0]) / Number(Ratio[1]);
 
             if(height > width){ //Long
-                //targetElement.style = "aspect-ratio: 2/1;width:100%;height:auto;max-height:100%;"
-                console.log(Number(parentStyle.width.match(/\d+/)?.[0]));
                 const newHeight = width * Number(Ratio[1])
-                console.log(newHeight);
+                //console.log(newHeight);
                 Object.assign(targetElement.style, {
                     width : parentStyle.width,
                     height : String(newHeight) + "px",
@@ -29,9 +27,7 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
 
             }
             else{ //Fat
-                //targetElement.style = "aspect-ratio: 2/1;width:auto;height:100%;max-width:100%;"
                 const newWidth = height * Number(Ratio[0])
-                console.log(newWidth);
                 Object.assign(targetElement.style, {
                     width : String(newWidth) + "px",
                     height : parentStyle.height,
