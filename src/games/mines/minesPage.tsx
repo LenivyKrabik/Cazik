@@ -1,6 +1,6 @@
 import React from "react";
-import "./Mines.css";
-import arr_matrix from "./mines_game";
+import "../../styles/Mines.css";
+import arr_matrix from "./minesGame";
 
 function Mines() {
   return (
@@ -14,7 +14,7 @@ function Mines() {
               onClick={() => console.log(item)}
             >
               {item}
-            </button>
+            </button> // {...} робить спочатку список стовпців а далі список із кнопок в стовпцях
           ))}
         </div>
       ))}
