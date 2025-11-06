@@ -25,8 +25,8 @@ function NestedLayout() {
 
 export default function NestedApp() {
   return (
-    <div className="nested-root">
-      element: <NestedLayout />
+    <div>
+      <NestedLayout />
       <Routes>
         <Route path="/" element={<Slots />} />
         <Route path="Mines" element={<Mines />} />
