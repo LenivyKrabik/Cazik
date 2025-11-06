@@ -19,7 +19,6 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
 
             if(height > width){ //Long
                 const newHeight = width * Number(Ratio[1])
-                //console.log(newHeight);
                 Object.assign(targetElement.style, {
                     width : parentStyle.width,
                     height : String(newHeight) + "px",
