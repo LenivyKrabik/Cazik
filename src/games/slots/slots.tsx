@@ -1,17 +1,18 @@
-import "../../styles/games.css";
+import "../../styles/slots.css";
 import RulesPanel from "../rulesPannel";
-import SlotsScreen from "./slotsGame";
+import SlotsScreen from "./slotsScreen";
 
 function Slots() {
   return (
-    <div className="gameWrapper">
+    <>
       <SlotsScreen />
       <RulesPanel
         title="How to play:"
         text="Just spin the wheel lil bro"
+        click={<div className="patternScreen"></div>}
         buttonText="Patterns"
       />
-    </div>
+    </>
   );
 }
 

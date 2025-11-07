@@ -53,11 +53,21 @@
     background-color: blanchedalmond; /*Dev color*/
 }
 
-.slotsColumn img{
-    width: 90%;
+.slotsColumn img {
+    height: 30%;
     aspect-ratio: 1 / 1;
-    top: -30%; /*-30 to 100%*/
-    
+    top: -35%; /*-30% to 105%*/
 
+    transition: none;
+  
     position: absolute;
+}
+
+@keyframes slotSpin {
+    0% { top: -35%; }
+    100% { top: 105%; }
+}
+
+.slotsColumn .spinning{
+    animation: slotSpin 0.5s linear infinite;
 }
