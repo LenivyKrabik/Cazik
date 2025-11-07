@@ -5,6 +5,8 @@ import arr_matrix from "./minesGame";
 function Mines() {
   return (
     <div className="minesPage">
+      <button className="modeMines">Сomplexity of game</button>
+      <div className="score">Score </div>
       <div className="box">
         {arr_matrix.map((line, index) => (
           <div key={"" + index}>

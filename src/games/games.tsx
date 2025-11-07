@@ -15,17 +15,15 @@ import "../styles/games.css";
 function NestedLayout() {
   return (
     <div className="nested-layout">
-      <main>
-        {navPanel()}
-        <Outlet />
-      </main>
+      {navPanel()}
+      <Outlet />
     </div>
   );
 }
 
 export default function NestedApp() {
   return (
-    <div>
+    <div className="gameWrapper">
       <NestedLayout />
       <Routes>
         <Route path="/" element={<Slots />} />
