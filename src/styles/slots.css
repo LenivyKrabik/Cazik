@@ -1,6 +1,6 @@
 .gameWrapper .slotsWraper{
     height: 100%;
-    width: calc(100% - 250px);
+    width: calc(100% - var(--rulesPanel-width));
     display: flex;
     justify-content: center;
     align-items: center;

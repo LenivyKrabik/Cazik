@@ -8,6 +8,8 @@
 
     --bright-secondary-color: #484945;
     --dark-secondary-color: #363732;
+
+    --rulesPanel-width: 250px;
 }
 
 *{
