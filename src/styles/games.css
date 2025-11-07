@@ -7,3 +7,10 @@
     display: flex;
     background-color: brown; /*Dev color*/
 }
+
+.gamePage{
+    width: 100%;
+    height: calc(calc(100vh - 130px));
+
+    display: flex;
+}

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "../styles/navPanel.css";
 
 //80px for logog 50 for navpan
 
-function navPanel() {
+function NavPanel() {
   return (
     <div className="gameNavPanel">
       <Link to={"/game/Slots"}>
@@ -15,4 +16,4 @@ function navPanel() {
   );
 }
 
-export default navPanel;
+export default NavPanel;

@@ -9,13 +9,13 @@ import {
 } from "react-router-dom";
 import Slots from "./slots/slots";
 import Mines from "./mines/minesPage";
-import navPanel from "./navPanel";
 import "../styles/games.css";
+import NavPanel from "./navPanel";
 
 function NestedLayout() {
   return (
-    <div className="nested-layout">
-      {navPanel()}
+    <div className="nestedLayout">
+      <NavPanel />
       <Outlet />
     </div>
   );
@@ -23,13 +23,15 @@ function NestedLayout() {
 
 export default function NestedApp() {
   return (
-    <div className="gameWrapper">
+    <div className="gamePage">
       <NestedLayout />
-      <Routes>
-        <Route path="/" element={<Slots />} />
-        <Route path="Mines" element={<Mines />} />
-        <Route path="Slots" element={<Slots />} />
-      </Routes>
+      <div className="gameWrapper">
+        <Routes>
+          <Route path="/" element={<Slots />} />
+          <Route path="Mines" element={<Mines />} />
+          <Route path="Slots" element={<Slots />} />
+        </Routes>
+      </div>
     </div>
   );
 }
