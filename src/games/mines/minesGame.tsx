@@ -13,7 +13,7 @@ for (let i = 0; i < place_of_bomb.length; i++) {
 }
 console.log(place_of_bomb);
 
-const arr_1 = Array(size).fill(false); //
+const arr_1 = Array(size).fill(false);
 const arr_matrix = arr_1.map((item) => (item = Array(size).fill(false))); //створення дворівневий масив з пустими слотами
 
 for (let i = 0; i < size; i++) {
