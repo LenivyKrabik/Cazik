@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 import '../styles/home.css'; 
@@ -39,5 +37,6 @@ const Home2Page: React.FC = () => {
     </div>
   );
 };
+
 
 export default Home2Page;
