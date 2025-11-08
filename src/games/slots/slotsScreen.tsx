@@ -21,7 +21,7 @@ function SlotsScreen() {
     RatioPreservingMaxScale(Screen.current, "5 / 4");
     window.addEventListener("resize", ratioPreserve);
 
-    //Quick check for change in state. Need to implement proper way later
+    //Quick check for change in state. Need to implement a proper way later
     setTimeout(() => {
       setColumns([
         { state: 2, show: [0, 1, 2] },
@@ -59,3 +59,4 @@ function SlotsScreen() {
 }
 
 export default SlotsScreen;
+
