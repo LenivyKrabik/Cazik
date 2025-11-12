@@ -1,20 +1,15 @@
 
 .minesPage{
     flex: 1;
-    
     height: 100%;
     width: 100%;
-    
     background-color: black;
 }
 
 .box{
     position: absolute;
     left: 30%;
-    
     display: flex;
-    
-
     justify-content: center;
     height: 75%;
     aspect-ratio: 1/1;
@@ -26,7 +21,7 @@
     height: 17%;
     aspect-ratio: 1/1;
     margin: 7.3%;
-    font-size: 18px;
+    font-size: 20px;
    
     color: rgb(241, 241, 241);
     background-color: rgb(45, 91, 47);

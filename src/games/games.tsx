@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  Link,
-  createBrowserRouter,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Slots from "./slots/slots";
 import Mines from "./mines/minesPage";
 import "../styles/games.css";
