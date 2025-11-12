@@ -8,14 +8,25 @@
 }
 
 .gameNavPanel{
-    position: absolute;
-    
 
+    display: flex;
+    position: flex;
+    height: 100%;
+    background-color: rgb(68, 139, 100);
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+    
 }
-.gameButtonsPanel{
-
-    
+.navButtonSlot{
+    height: 7%;
 }
 .gameNavButton{
+    height: 100%;
+    width: 95%;
+    border-radius: 20px;
     
+    background-color: rgb(45, 105, 75);
 }
+

@@ -6,10 +6,10 @@ import "../styles/navPanel.css";
 function NavPanel() {
   return (
     <div className="gameNavPanel">
-      <Link to={"/game/Slots"}>
+      <Link to={"/game/Slots"} className="navButtonSlot">
         <button className="gameNavButton">Slots</button>
       </Link>
-      <Link to={"/game/Mines"}>
+      <Link to={"/game/Mines"} className="navButtonSlot">
         <button className="gameNavButton">Mines</button>
       </Link>
     </div>
