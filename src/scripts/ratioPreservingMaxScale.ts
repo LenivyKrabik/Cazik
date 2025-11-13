@@ -22,6 +22,7 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
                 Object.assign(targetElement.style, {
                     width : parentStyle.width,
                     height : String(newHeight) + "px",
+                    fontSize: String(newHeight/10) + "px",
                 })
 
             }
@@ -30,6 +31,7 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
                 Object.assign(targetElement.style, {
                     width : String(newWidth) + "px",
                     height : parentStyle.height,
+                    fontSize: Number(parentStyle.height.match(/\d+/)?.[0]) / 10 + "px",
                 })
             }    
         }
