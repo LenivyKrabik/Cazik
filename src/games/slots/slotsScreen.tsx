@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import RatioPreservingMaxScale from "../../scripts/ratioPreservingMaxScale";
 import SlotsColumn from "./slotsColumn";
+import patternsChecker from "./patternsChecker";
 
 function SlotsScreen() {
   const Screen = useRef(null);
@@ -33,18 +34,21 @@ function SlotsScreen() {
       const newResult = [0, 0, 0, 0, 0].map(() =>
         [0, 0, 0].map(() => Math.floor(Math.random() * 3))
       );
-      console.log(newResult);
       //Set new result of a spin
       setTimeout(() => {
         let waitTime = 0;
         for (const [i, result] of newResult.entries()) {
+          //Timeout to stop columns not at the same time
           setTimeout(() => {
             setColumns((prev) =>
               prev.map((column, id) =>
                 id === i ? { state: 2, show: result } : column
               )
             );
-            if (i === 4) wholeScreenState.current = 2;
+            //Runs when last column stops
+            if (i === 4) {
+              wholeScreenState.current = 2;
+            }
           }, waitTime);
           waitTime += Math.floor(Math.random() * 500);
         }
@@ -62,7 +66,7 @@ function SlotsScreen() {
       <div ref={Screen} className="slotsScreen">
         <div className="slotsGame">
           {columns.map((item, id) => (
-            <SlotsColumn key={id} id={id} state={item.state} show={item.show} />
+            <SlotsColumn key={id} state={item.state} show={item.show} />
           ))}
         </div>
         <div className="slotsUI">
