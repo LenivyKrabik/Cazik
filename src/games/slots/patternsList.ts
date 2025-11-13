@@ -709,5 +709,4 @@ const allPatterns: pattern[] = [
     blockedMasks: [],
   },
 ];
-
 export default allPatterns;
