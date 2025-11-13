@@ -1,6 +1,5 @@
-
 /**
- * Resizing div with said aspect raio while not overflowing it's parrent div
+ * Resizing div with said aspect raio while not overflowing it's parent div
  * @param targetElement {HTMLDivElement} Div that needs resizing
  * @param parent {HTMLDivElement} Div's parent
  * @param aspectRatio {string}
@@ -40,5 +39,6 @@ const RatioPreservingMaxScale = (targetElement: HTMLDivElement | null, aspectRat
 
     }
 }
+
 
 export default RatioPreservingMaxScale;
