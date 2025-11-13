@@ -123,7 +123,11 @@ function SlotsColumn({ id, state, show = null }: Props) {
       console.log("Respinning...");
       previousState.current = 1;
       Respinning();
-    } else if (state === 0) {
+    } else if (
+      state === 0 &&
+      previousState.current !== null &&
+      previousState.current !== 0
+    ) {
       console.log("Stopping spinning");
       previousState.current = 0;
       stopSpin();
