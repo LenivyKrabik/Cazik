@@ -1,13 +1,12 @@
-import { useEffect, useOptimistic, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../../styles/slots.css";
 interface Props {
-  id: number;
   state: number;
   show: number[] | null;
 }
 
 //States - 0 - stop, 1 - spinning, 2 - result  ; Can go 0 => 1; 1 => 2; 1 => 0
-function SlotsColumn({ id, state, show = null }: Props) {
+function SlotsColumn({ state, show = null }: Props) {
   const icons = ["/Lemon.png", "/Cherry.png", "/Six-Seven.png"];
 
   const pictures = [
