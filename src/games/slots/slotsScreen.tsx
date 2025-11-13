@@ -22,6 +22,7 @@ function SlotsScreen() {
 
   const spinTheWheel = () => {
     if (wholeScreenState.current === 0 || wholeScreenState.current === 2) {
+      console.log("I am buggin it");
       wholeScreenState.current = 1;
       setColumns(
         [0, 0, 0, 0, 0].map(() => {
@@ -47,7 +48,11 @@ function SlotsScreen() {
             );
             //Runs when last column stops
             if (i === 4) {
-              wholeScreenState.current = 2;
+              setTimeout(() => {
+                //Would be better to properly wait for end of last column but his will do
+                console.log("Stil buggin it");
+                wholeScreenState.current = 2;
+              }, 500);
             }
           }, waitTime);
           waitTime += Math.floor(Math.random() * 500);
