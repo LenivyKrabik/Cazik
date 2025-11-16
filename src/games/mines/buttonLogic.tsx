@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles.css";
 
 export default function Button(value: boolean, index: number, index_2: number) {
@@ -6,7 +6,6 @@ export default function Button(value: boolean, index: number, index_2: number) {
 
   const handleClick = () => {
     setIsDisabled(true);
-    console.log({ value });
   };
 
   return (
@@ -16,7 +15,7 @@ export default function Button(value: boolean, index: number, index_2: number) {
       className="gameMinesButton"
       key={"" + index + "." + index_2}
     >
-      {isDisabled ? (value ? "X" : "0") : "?"}
+      {isDisabled ? (value ? "X" : "") : "?"}
     </button>
   );
 }

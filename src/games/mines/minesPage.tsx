@@ -1,24 +1,19 @@
 import React from "react";
-import "../../styles/Mines.css";
-import arr_matrix from "./minesGame";
 
-import Button from "./buttonLogic";
+import RulesPanel from "../rulesPannel";
+import MinesGame from "./gameM";
 
 function Mines() {
   return (
-    <div className="minesPage">
-      <button className="modeMines">Сomplexity of game</button>
-      <div className="score">Score </div>
-      <div className="box">
-        {arr_matrix.map((line, index: number) => (
-          <div key={"" + index}>
-            {line.map((item: boolean, index_2: number) =>
-              Button(item, index, index_2)
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
+    <>
+      <MinesGame />
+      <RulesPanel
+        title="How to play:"
+        text="Avoid bombs. For every empty slot you increase your winnings."
+        click={<div className="patternScreen"></div>}
+        buttonText="Patterns"
+      />
+    </>
   );
 }
 
