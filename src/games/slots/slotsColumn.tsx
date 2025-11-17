@@ -3,10 +3,11 @@ import "../../styles/slots.css";
 interface Props {
   state: number;
   show: number[] | null;
+  highlighted: number[];
 }
 
 //States - 0 - stop, 1 - spinning, 2 - result  ; Can go 0 => 1; 1 => 2; 1 => 0
-function SlotsColumn({ state, show = null }: Props) {
+function SlotsColumn({ state, show = null, highlighted }: Props) {
   const icons = ["/Lemon.png", "/Cherry.png", "/Six-Seven.png"];
 
   const pictures = [
@@ -137,6 +138,26 @@ function SlotsColumn({ state, show = null }: Props) {
       showResult();
     }
   }, [state]);
+
+  //Highlight animation
+  useEffect(() => {
+    if (state === 2) {
+      console.log(highlighted);
+      for (let i = 0; i < highlighted.length; i++) {
+        if (highlighted[i] === 1) {
+          const picToHighlight = picByTempId.current![3 - i];
+          picToHighlight.current!.style.transition = "scale 0.25s ease-in-out";
+          picToHighlight.current!.style.scale = "1.3";
+          setTimeout(() => {
+            picToHighlight.current!.style.scale = "1";
+            setTimeout(() => {
+              picToHighlight.current!.style.transition = "none";
+            }, 250);
+          }, 250);
+        }
+      }
+    }
+  }, [highlighted]);
 
   return (
     <div className="slotsColumn">

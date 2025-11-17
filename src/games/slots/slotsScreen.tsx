@@ -15,6 +15,14 @@ function SlotsScreen() {
     { state: 0, show: [0] },
   ]);
 
+  const [highlighted, setHighlighted] = useState<number[][]>([
+    [],
+    [],
+    [],
+    [],
+    [],
+  ]);
+
   //Make screen remain rario and fit in div
   const ratioPreserve = () => {
     RatioPreservingMaxScale(Screen.current, "5 / 4");
@@ -30,6 +38,7 @@ function SlotsScreen() {
       );
       //Spin all of the columns again
 
+      setHighlighted([[], [], [], [], []]);
       //Get new result of a spin
       const newResult = [0, 0, 0, 0, 0].map(() =>
         [0, 0, 0].map(() => Math.floor(Math.random() * 3))
@@ -45,11 +54,22 @@ function SlotsScreen() {
                 id === i ? { state: 2, show: result } : column
               )
             );
-            //Runs when last column stops
+            //Runs when last column stops   //Would be better to properly wait for end of last column but this will do
             if (i === 4) {
               setTimeout(() => {
-                //Would be better to properly wait for end of last column but his will do
-                wholeScreenState.current = 2;
+                const needToAnimate = patternsChecker(newResult);
+                console.log(needToAnimate);
+                let waitTime = 0;
+                for (let patternToAnimate of needToAnimate) {
+                  setTimeout(() => {
+                    setHighlighted(patternToAnimate);
+                  }, waitTime);
+                  waitTime += 525;
+                }
+                //Allowing next spin
+                setTimeout(() => {
+                  wholeScreenState.current = 2;
+                }, waitTime);
               }, 500);
             }
           }, waitTime);
@@ -69,7 +89,12 @@ function SlotsScreen() {
       <div ref={Screen} className="slotsScreen">
         <div className="slotsGame">
           {columns.map((item, id) => (
-            <SlotsColumn key={id} state={item.state} show={item.show} />
+            <SlotsColumn
+              key={id}
+              state={item.state}
+              show={item.show}
+              highlighted={highlighted[id]}
+            />
           ))}
         </div>
         <div className="slotsUI">
