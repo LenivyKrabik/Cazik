@@ -152,7 +152,7 @@ function SlotsColumn({ state, show = null, highlighted }: Props) {
             picToHighlight.current!.style.scale = "1";
             setTimeout(() => {
               picToHighlight.current!.style.transition = "none";
-            }, 250);
+            }, 200);
           }, 250);
         }
       }
