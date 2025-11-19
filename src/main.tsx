@@ -8,7 +8,7 @@ import Header from "./header";
 import Footer from "./footer";
 import "./styles.css";
 
-//Layout element (basicly just all site)
+//Layout element (basically just all site)
 function Layout() {
   return (
     <>
