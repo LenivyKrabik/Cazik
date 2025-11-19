@@ -79,6 +79,7 @@
 
 .spinButton {
   --spinButton-height: 75%;
+
   width: 25%;
   height: var(--spinButton-height);
 
@@ -101,4 +102,43 @@
 
 .spinButton:active {
   background-color: color-mix(in hsl, rgb(223, 19, 19) 60%, black 40%);
+}
+
+.betButtonsWrapper {
+  position: absolute;
+
+  --betButtons-height: 75%;
+
+  height: var(--betButtons-height);
+  aspect-ratio: 1/2;
+
+  top: calc(50% - calc(var(--betButtons-height) / 2));
+  right: 28%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.betButtonsWrapper button {
+  height: 50%;
+
+  font-size: 0.5em;
+  line-height: 100%;
+
+  cursor: pointer;
+  border: 6px solid rgb(180, 16, 16); /*Dev color*/
+  border-radius: 40%;
+  background-color: rgb(223, 19, 19); /*Dev color*/
+}
+
+.betButtonsWrapper button:hover {
+  background-color: color-mix(in hsl, rgb(223, 19, 19) 90%, white 10%);
+}
+
+.betButtonsWrapper button:active {
+  background-color: color-mix(in hsl, rgb(223, 19, 19) 60%, black 5%);
+}
+
+.slotsUI small {
+  font-size: 0.5em;
 }

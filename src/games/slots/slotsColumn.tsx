@@ -142,7 +142,6 @@ function SlotsColumn({ state, show = null, highlighted }: Props) {
   //Highlight animation
   useEffect(() => {
     if (state === 2) {
-      console.log(highlighted);
       for (let i = 0; i < highlighted.length; i++) {
         if (highlighted[i] === 1) {
           const picToHighlight = picByTempId.current![3 - i];
