@@ -1,5 +1,8 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
+/*
+ * Вбий себе
+ */
 import Slots from "./slots/slots";
 import Mines from "./mines/minesPage";
 import "../styles/games.css";
@@ -28,3 +31,4 @@ export default function NestedApp() {
     </div>
   );
 }
+
