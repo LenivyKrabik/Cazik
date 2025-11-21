@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: gray; /*Dev color*/
+  background-color: var(--dark-secondary-color);
 }
 
 .gameWrapper .slotsWraper .slotsScreen {
@@ -19,7 +19,7 @@
   overflow: hidden;
   display: flex;
 
-  background-color: darkblue; /*Dev color*/
+  background-color: var(--bright-secondary-color); /*Dev color*/
 }
 
 .gameWrapper .slotsUI {
@@ -29,7 +29,7 @@
 
   font-size: 1em;
 
-  background-color: rgb(240, 127, 255); /*Dev color*/
+  background-color: rgb(68, 139, 100);
 }
 
 .gameWrapper .patternScreen {
