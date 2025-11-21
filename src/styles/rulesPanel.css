@@ -1,69 +1,82 @@
-.rulesPanel{
-    height: 100%;
-    width: var(--rulesPanel-width);
+.rulesPanel {
+  height: 100%;
+  width: var(--rulesPanel-width);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    position: absolute;
-    right: 0px;
+  position: absolute;
+  right: 0px;
 
-    background-color: rgb(4, 119, 185); /*Dev color*/
+  background-color: var(--bright-secondary-color);
 }
 
-.title{
-    width: 100%;
-    height: 50px;
+.title {
+  width: 100%;
+  height: 50px;
 
-    display: flex;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  font-size: 34px;
+  justify-content: center;
+  align-items: center;
 
-    background-color: aqua; /*Dev color*/
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: color-mix(
+    in hsl,
+    var(--bright-secondary-color) 85%,
+    white 15%
+  );
+  /*background-color: aqua; /*Dev color*/
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Dev font*/
-
+  font-family: "Courier New", Courier, monospace;
 }
 
-.rules{
-    width: 100%;
-    height: fit-content;
-    padding-top: 20px;
-
-    background-color: gold; /*Dev color*/
-    font-size: 15px;
+.rules {
+  width: 100%;
+  height: 75%;
+  padding-top: 20px;
+  overflow: scroll;
+  font-size: 15px;
 }
 
 .rules p {
-    position: relative;
-    width: calc(100% - 15px);
-    left: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Dev font*/
+  position: relative;
+  width: calc(100% - 15px);
+  left: 15px;
+  font-family: "Courier New", Courier, monospace; /*Dev font*/
 }
 
-.rulesPanel button{
-    /*outline: none;
+.rulesPanel button {
+  /*outline: none;
     border: none;*/
-    cursor: pointer;
+  cursor: pointer;
 
-    border-radius: 15px;
-    border: 3px solid rgb(168, 29, 196); /*Dev color*/
-    background-color: rgb(217, 37, 253); /*Dev color*/
+  border-radius: 15px;
+  border: 3px solid var(--dark-secondary-color); /*Dev color*/
+  background-color: var(--middle-primary-color); /*Dev color*/
 
-    /*padding: 10px 70px;*/
-    width: 200px;
-    height: 50px;
-    position: absolute;
-    bottom: 5%;
-    font-size: 30px;
+  /*padding: 10px 70px;*/
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  bottom: 5%;
+  font-size: 30px;
 }
 
-.rulesPanel button:hover{
-    background-color: color-mix(in hsl, rgb(217, 37, 253) 90%, white 10%);
+.rulesPanel button:hover {
+  background-color: color-mix(
+    in hsl,
+    var(--middle-primary-color) 90%,
+    white 10%
+  );
 }
 
-.rulesPanel button:active{
-    background-color: color-mix(in hsl, rgb(217, 37, 253) 60%, black 40%);
+.rulesPanel button:active {
+  background-color: color-mix(
+    in hsl,
+    var(--middle-primary-color) 60%,
+    black 40%
+  );
 }
