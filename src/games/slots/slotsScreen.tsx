@@ -5,7 +5,12 @@ import patternsChecker from "./patternsChecker";
 
 function SlotsScreen() {
   //Change when money system will be implemented
-  const [money, setMoney] = useState(1000);
+  if (localStorage.getItem("money") === null) {
+    localStorage.setItem("money", JSON.stringify(1000));
+  }
+  const [money, setMoney] = useState(
+    JSON.parse(localStorage.getItem("money")!)
+  );
 
   const [betAmount, setBetAmount] = useState(5);
   const minBetStep = 5;
@@ -118,7 +123,9 @@ function SlotsScreen() {
       }
       moneyUp += (maskItemsToValue[count - 1] * betAmount) / 5;
     }
-    setMoney(money + moneyUp - betAmount);
+    const newMoneyAmount = money + moneyUp - betAmount;
+    localStorage.setItem("money", JSON.stringify(newMoneyAmount));
+    setMoney(newMoneyAmount);
   };
 
   return (
