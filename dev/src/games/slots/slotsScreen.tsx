@@ -12,6 +12,7 @@ function SlotsScreen() {
     JSON.parse(localStorage.getItem("money")!)
   );
 
+  const backendUrl = "http://localhost:3000/";
   const [betAmount, setBetAmount] = useState(5);
   const minBetStep = 5;
 
@@ -41,11 +42,16 @@ function SlotsScreen() {
     RatioPreservingMaxScale(Screen.current, "5 / 4");
   };
 
-  const spinTheWheel = () => {
+  const spinTheWheel = async () => {
     if (
       (wholeScreenState.current === 0 || wholeScreenState.current === 2) &&
       money >= betAmount
     ) {
+      //Get new result of a spin
+      const newResultResponse = await fetch(backendUrl + "games/slots/newSpin");
+      if (!newResultResponse.ok) throw new Error("Can't connect to server");
+      const newResult = await newResultResponse.json();
+
       wholeScreenState.current = 1;
       setColumns(
         [0, 0, 0, 0, 0].map(() => {
@@ -55,10 +61,6 @@ function SlotsScreen() {
       //Spin all of the columns again
 
       setHighlighted([[], [], [], [], []]);
-      //Get new result of a spin
-      const newResult = [0, 0, 0, 0, 0].map(() =>
-        [0, 0, 0].map(() => Math.floor(Math.random() * 3))
-      );
 
       dealWithMoney(newResult);
       //Set new result of a spin
