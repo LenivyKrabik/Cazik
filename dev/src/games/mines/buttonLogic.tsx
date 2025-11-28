@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../../styles.css";
 
 export default function Button(value: boolean, index: number, index_2: number) {

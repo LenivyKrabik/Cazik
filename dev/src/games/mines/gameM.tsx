@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Mines.css";
 
 import arr_matrix from "./minesMatrix";
-import Button from "./buttonLogic";
 import ButtonMode from "./modeMines";
+
+let isOver = false;
+function Button(value: boolean, index: number, index_2: number) {
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  const handleClick = () => {
+    setIsDisabled(true);
+    isOver = value;
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      disabled={isDisabled}
+      className="gameMinesButton"
+      key={"" + index + "." + index_2}
+    >
+      {isDisabled ? (value ? "X" : "") : "?"}
+    </button>
+  );
+}
 
 export default function MinesGame() {
   return (
     <div className="minesPage">
+      {isOver ? (
+        <button
+          className="refreshButton"
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          refresh
+        </button>
+      ) : (
+        <></>
+      )}
       <ButtonMode />
       <div className="score">Score </div>
       <div className="box">
