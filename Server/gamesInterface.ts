@@ -1,4 +1,4 @@
-const gamesInterface = {
+const gamesInterface: {[key: string]: any} = {
   slots: {
     newSpin: () => {
       return [0, 0, 0, 0, 0].map(() =>
