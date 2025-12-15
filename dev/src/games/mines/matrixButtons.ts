@@ -1,4 +1,4 @@
-const am_tnt = 4; //приймач режиму гри
+const am_tnt = 4; //кількість бомб
 const size = 5;
 const place_of_bomb = Array(am_tnt);
 

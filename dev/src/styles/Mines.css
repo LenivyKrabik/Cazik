@@ -5,7 +5,7 @@
     height: 100%;
     width: calc(100% - 250px);
     
-    background-color: black;
+    background-color: #010f03;
 }
 
 .box{
@@ -52,3 +52,38 @@
      transform: translate(-50%);
 }
 
+.endWindow{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.refreshButton{
+    position: relative;
+    width: 120px;
+    height: 30px;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.endText{
+    color: red;
+    text-align: center;
+    margin-top: 20%;
+    font-size: 50px;
+}
+.endScore{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 30px;
+}
+.counter{
+    position: absolute;
+    top:80%;
+    left:50%;
+    width: 100px;
+    height: 100px;
+}

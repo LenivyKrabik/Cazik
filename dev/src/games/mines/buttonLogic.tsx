@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../../styles.css";
+import userInfo from "../../profile/userInfo";
 
-export default function Button(value: boolean, index: number, index_2: number) {
+function Button(value: boolean, index: number, index_2: number) {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
@@ -19,3 +20,13 @@ export default function Button(value: boolean, index: number, index_2: number) {
     </button>
   );
 }
+function testWithAdd() {
+  const user = userInfo();
+  return (
+    <button className="counter" onClick={() => user.change("count", 1)}>
+      +1
+    </button>
+  );
+}
+
+export default testWithAdd;

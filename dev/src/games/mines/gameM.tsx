@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../../styles/Mines.css";
 
-import arr_matrix from "./minesMatrix";
+import arr_matrix from "./matrixButtons";
 import ButtonMode from "./modeMines";
+import endWindow from "./endWidnow";
+import testWithAdd from "./buttonLogic";
 
 let isOver = false;
 function Button(value: boolean, index: number, index_2: number) {
@@ -28,18 +30,6 @@ function Button(value: boolean, index: number, index_2: number) {
 export default function MinesGame() {
   return (
     <div className="minesPage">
-      {isOver ? (
-        <button
-          className="refreshButton"
-          onClick={() => {
-            window.location.reload();
-          }}
-        >
-          refresh
-        </button>
-      ) : (
-        <></>
-      )}
       <ButtonMode />
       <div className="score">Score </div>
       <div className="box">
@@ -51,6 +41,8 @@ export default function MinesGame() {
           </div>
         ))}
       </div>
+      {isOver ? endWindow(404) : <></>}
+      {testWithAdd()}
     </div>
   );
 }
