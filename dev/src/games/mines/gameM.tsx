@@ -42,7 +42,6 @@ export default function MinesGame() {
         ))}
       </div>
       {isOver ? endWindow(404) : <></>}
-      {testWithAdd()}
     </div>
   );
 }

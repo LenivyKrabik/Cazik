@@ -1,8 +1,11 @@
+import cors from "cors";
 import express from "express";
 import { gamesInterface } from "./gamesInterface.ts";
 
 const app = express();
-
+app.use(cors({
+  origin: "http://localhost:5173" // Дозволяємо доступ саме вашому Vite-сайту
+}));
 app.get("/", (req, res) => {
   res.send("Hello world!"); //Handshake
 });

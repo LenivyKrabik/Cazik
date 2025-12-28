@@ -14,10 +14,5 @@ function test() {
 }
 
 export default function Profile() {
-  return (
-    <div className="ProfilePage">
-      {test()}
-      {testWithAdd()}
-    </div>
-  );
+  return <div className="ProfilePage"></div>;
 }

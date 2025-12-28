@@ -48,7 +48,7 @@ function SlotsScreen() {
       money >= betAmount
     ) {
       //Get new result of a spin
-      const newResultResponse = await fetch(backendUrl + "games/slots/newSpin");
+      const newResultResponse = await fetch("games/slots/newSpin");
       if (!newResultResponse.ok) throw new Error("Can't connect to server");
       const newResult = await newResultResponse.json();
 
