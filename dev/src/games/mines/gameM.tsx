@@ -4,7 +4,6 @@ import "../../styles/Mines.css";
 import arr_matrix from "./matrixButtons";
 import ButtonMode from "./modeMines";
 import endWindow from "./endWidnow";
-import testWithAdd from "./buttonLogic";
 
 let isOver = false;
 function Button(value: boolean, index: number, index_2: number) {
